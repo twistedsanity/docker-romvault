@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Romvault</Name>
+  <Repository>mikenye/romvault</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644524978</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/mnt/user</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/mount_mergerfs/gdrive_media_vfs/software/games/romvault/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="shares" Target="/mnt/user" Default="" Mode="rw" Description="Container Path: /mnt/user" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Main" Target="5800" Default="" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="false" Mask="false">5800</Config>
+  <Config Name="shares" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/mount_mergerfs/gdrive_media_vfs/software/games/romvault/</Config>
+</Container>
