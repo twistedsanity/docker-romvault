@@ -12,6 +12,20 @@ RUN set -x && \
         libgtk2.0-0 \
         && \
     # Get latest version of ROMVault & RVCmd
+#     ROMVAULT_DOWNLOAD=$(curl 'https://www.romvault.com' | \
+#         sed -n 's/.*href="\([^"]*\).*/\4/p' | \
+#         grep -i download | \
+#         grep -i romvault | \
+#         sort -r | \
+#         head -1) \
+#         && \
+#     RVCMD_DOWNLOAD=$(curl 'https://www.romvault.com' | \
+#         sed -n 's/.*href="\([^"]*\).*/\2/p' | \
+#         grep -i download | \
+#         grep -i rvcmd | \
+#         sort -r | \
+#         head -1) \
+#         && \
     ROMVAULT_DOWNLOAD=$(curl 'https://www.romvault.com' | \
         sed -n 's/.*href="\([^"]*\).*/\4/p' | \
         grep -i download | \
@@ -31,8 +45,8 @@ RUN set -x && \
     echo "rvcmd" $(basename --suffix=.zip $RVCMD_DOWNLOAD | cut -d "_" -f 2) >> /VERSIONS && \
     # Download RomVault
     mkdir -p /opt/romvault_downloads/ && \
-    curl --output /opt/romvault_downloads/romvault.zip "https://www.romvault.com/${ROMVAULT_DOWNLOAD}" && \
-    curl --output /opt/romvault_downloads/rvcmd.zip "https://www.romvault.com/${RVCMD_DOWNLOAD}" && \
+    curl --output /opt/romvault_downloads/romvault.zip "https://www.romvault.com/download/ROMVault_V3.4.4.zip" && \
+    curl --output /opt/romvault_downloads/rvcmd.zip "https://www.romvault.com/download/RVCmd_V3.4.2-Linux-x64.zip" && \
     unzip /opt/romvault_downloads/romvault.zip -d /opt/romvault/ && \
     unzip /opt/romvault_downloads/rvcmd.zip -d /opt/romvault/ && \
     # Clean up
