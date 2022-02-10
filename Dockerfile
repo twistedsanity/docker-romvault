@@ -13,14 +13,14 @@ RUN set -x && \
         && \
     # Get latest version of ROMVault & RVCmd
     ROMVAULT_DOWNLOAD=$(curl 'https://www.romvault.com' | \
-        sed -n 's/.*href="\([^"]*\).*/\1/p' | \
+        sed -n 's/.*href="\([^"]*\).*/\4/p' | \
         grep -i download | \
         grep -i romvault | \
         sort -r | \
         head -1) \
         && \
     RVCMD_DOWNLOAD=$(curl 'https://www.romvault.com' | \
-        sed -n 's/.*href="\([^"]*\).*/\1/p' | \
+        sed -n 's/.*href="\([^"]*\).*/\2/p' | \
         grep -i download | \
         grep -i rvcmd | \
         sort -r | \
