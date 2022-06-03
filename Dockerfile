@@ -7,7 +7,7 @@ RUN set -x && \
         wget \
         ca-certificates \
         unzip \
-        mono-complete \
+        mono-devel \
         libmono-system-servicemodel4.0a-cil \
 #
         libmono-system-windows-forms4.0-cil \
