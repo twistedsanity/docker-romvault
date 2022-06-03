@@ -7,7 +7,7 @@ RUN set -x && \
         wget \
         ca-certificates \
         unzip \
-        mono-runtime \
+        mono-complete \
         libmono-system-servicemodel4.0a-cil \
         libgtk2.0-0 \
         && \
