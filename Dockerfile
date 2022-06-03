@@ -9,6 +9,13 @@ RUN set -x && \
         unzip \
         mono-complete \
         libmono-system-servicemodel4.0a-cil \
+#
+        libmono-system-windows-forms4.0-cil \
+        libmono-system-web4.0-cil \
+        libmono-system-net4.0-cil \
+        libmono-system-runtime-serialization4.0-cil \
+        libmono-system-xml-linq4.0-cil \
+#        
         libgtk2.0-0 \
         && \
     # Get latest version of ROMVault & RVCmd
